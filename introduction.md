@@ -25,8 +25,8 @@ Here there is an usage example :
 
 ```text
 POST /api/v1/user/?_key=YOUR_API_KEY HTTP/1.1
+HOST www.bitrevex.com
 Content-Type: application/json
-Postman-Token: ec0a29e1-49c9-4ac9-99c0-59709cc645bb
 {
 	"jsonrpc":"2.0",
 	"id":1,
@@ -40,6 +40,7 @@ Postman-Token: ec0a29e1-49c9-4ac9-99c0-59709cc645bb
 Response:
 
 ```text
+
 Date :Tue, 10 Sep 2019 22:28:27 +0000
 Date :Tue, 10 Sep 2019 22:28:27 GMT
 Connection :close
@@ -48,4 +49,51 @@ Cache-Control:no-cache, private
 Content-Type:application/json
 X-RateLimit-Limit:60
 X-RateLimit-Remaining:59
+
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "user": {
+            "id": 32,
+            "email": "arnaud@gmail.com",
+            "referral_code": "61340630",
+            "inscription_date": "2019-03-04 00:30:42",
+            "referrals_count": 1,
+            "level": 1
+        },
+        "referrals": [
+            {
+                "id": 34,
+                "email": "..."
+            }
+            (...)
+        ]
+    }
+}
+
 ```
+
+### Public API Overview
+
+The public API provides you methods for retrieving data such as : 
+
+- The 24h OHLC about any pair
+- The 24h Bitcoin volume
+- ...
+
+For the public API, you don't need any special field for authentication. Your requests limits is defined by your IP address. Any IP address can't do more than **5 requests/seconds**. Go on [Public API Docs](./public_api_docs/public_api.md) for more informations. 
+
+
+### Private API Overview
+
+The private API provides you methods and endpoints for user specific information(profile info, referrals, pending withdrawals,deposits...)  and for trading(open orders, order sending, order history,...) 
+
+You need to put your Bitrevex API key into the URL request part to perform your requests correctly. 
+
+The example above show an example of usage of the private API.
+
+For more information go on [Private API Docs](./private_api_docs/private_api.md).
+
+
+###WebSocket API Overview
