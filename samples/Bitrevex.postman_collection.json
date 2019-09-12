@@ -1,0 +1,491 @@
+{
+	"info": {
+		"_postman_id": "62d082a7-b9dd-4562-b865-35f952f9f3ed",
+		"name": "Bitrevex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[user] getUserInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"id\":1,\n\t\"method\":\"getUserInfo\",\n\t\"params\":{\n\t\t\"list_referrals\" :true,\n\t\t\"show_level_info\" : true\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/user/?_key=56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						""
+					],
+					"query": [
+						{
+							"key": "_key",
+							"value": "56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[funds] getBalance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"getBalance\",\n\t\"params\":{\n\t\t\"type\":\"2\",\n\t\t\"symbol\":\"BNB\"\n\t},\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/funds/?_key=56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"funds",
+						""
+					],
+					"query": [
+						{
+							"key": "_key",
+							"value": "56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[funds] getAddress",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\" : \"2.0\",\n\t\"method\": \"getAddress\",\n\t\"params\" : {\n\t\t\"symbol\":\"ETH\"\n\t},\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/funds/?_key=56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"funds",
+						""
+					],
+					"query": [
+						{
+							"key": "_key",
+							"value": "56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[funds] getDeposits",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\" : \"getDeposits\",\n\t\"params\" : {\n\t\t\"symbol\" : \"RVC\"\n\t},\n\t\"id\":\"1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/funds/?_key=56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"funds",
+						""
+					],
+					"query": [
+						{
+							"key": "_key",
+							"value": "56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[funds] getWithdraws",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"getWithdraws\",\n\t\"params\":{\n\t\t\"symbol\":\"ETH\"\n\t},\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/funds/?_key=56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"funds",
+						""
+					],
+					"query": [
+						{
+							"key": "_key",
+							"value": "56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[trade] getOpenOrders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"getOpenOrders\",\n\t\"params\":{\n\t\t\"order_type\":1\n\t},\n\t\"id\" : 1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/trade/?_key=56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"trade",
+						""
+					],
+					"query": [
+						{
+							"key": "_key",
+							"value": "56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[trade] getOrderHistory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\" : \"getOrderHistory\",\n\t\"params\":{\n\t\t\"want_symbol\":\"ETH\",\n\t\t\"offer_symbol\" : \"BTC\"\n\t},\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/trade/?_key=56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"trade",
+						""
+					],
+					"query": [
+						{
+							"key": "_key",
+							"value": "56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[trade] getTransactions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"getTransactions\",\n\t\"params\":{\n\t\t\"want_symbol\":\"ETH\",\n\t\t\"offer_symbol\": \"BTC\",\n\t\t\"all\":true\n\t},\n\t\"id\":\"1\"\n}\n"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/trade/?_key=56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"trade",
+						""
+					],
+					"query": [
+						{
+							"key": "_key",
+							"value": "56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[trade] sendOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"sendOrder\",\n\t\"params\":{\n\t\t\"want_symbol\":\"ETH\",\n\t\t\"offer_symbol\":\"BTC\",\n\t\t\"type\":\"LIMIT\",\n\t\t\"side\":\"BID\",\n\t\t\"price\":\"0.000001\",\n\t\t\"amount\":\"0.04\"\n\t},\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/trade/?_key=56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"trade",
+						""
+					],
+					"query": [
+						{
+							"key": "_key",
+							"value": "56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[trade] cancelOrder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"cancelOrder\",\n\t\"params\":{\n\t\t\"order_id\":1002\n\t},\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/trade/?_key=56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"trade",
+						""
+					],
+					"query": [
+						{
+							"key": "_key",
+							"value": "56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[trade] getAllOpenOrders",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"getAllOpenOrders\",\n\t\"params\":{\n\t\t\"want_symbol\" : \"ETH\",\n\t\t\"offer_symbol\" : \"BTC\",\n\t\t\"order_side\":\"BID\",\n\t\t\"order_type\":0\n\t},\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/trade/?_key=56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"trade",
+						""
+					],
+					"query": [
+						{
+							"key": "_key",
+							"value": "56513057a9c8130c6592175ef0837d707b4db1cafa50d01dea71ad2c62398127"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[public] get24h",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"get24h\",\n\t\"params\":{\n\t\t\"want_symbol\":\"ETH\",\n\t\t\"offer_symbol\":\"BTC\"\n\t},\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/public/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"public",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[public] get24hBTCVolume",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"jsonrpc\":\"2.0\",\n\t\"method\":\"get24hBTCVolume\",\n\t\"id\":1\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/v1/public/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"public",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

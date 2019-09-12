@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bitrevex websocket sample</title>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap.css">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+	<div class="container">
+	<div class="row py-3">
+		<div class="col-md-12">
+			<h3>Bitrevex real-time orders</h3>
+		</div>
+	</div>	
+
+	<div class="row" style="font-size: 12px">
+		<div class="col-md-6">
+			<h4 class="text-success">BID orders events</h4>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Event</th>
+						<th>Pair</th>
+						<th>Price</th>
+						<th>Amount</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody id="bidOrders">
+					
+				</tbody>
+			</table>
+		</div>
+
+
+		<div class="col-md-6">
+			<h4 class="text-danger">ASK orders events</h4>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Event</th>
+						<th>Pair</th>
+						<th>Price</th>
+						<th>Amount</th>
+						<th>Status</th>
+					</tr>
+				</thead>
+				<tbody id="askOrders">
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+	</div>
+</body>
+<script type="text/javascript" src="vendor/jquery.3.2.1.min.js"></script>
+<script type="text/javascript" src="vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</html>
