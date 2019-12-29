@@ -1,16 +1,16 @@
-#Bitrevex official API Documentation
+# Bitrevex official API Documentation
 
-##Trade API
+## Trade API
 
-###Overview
+### Overview
 
 The following section describe how to use bitrevex API to perform trade based operations(listing orders, sending orders, canceling orders, and so.)
 
 Used endpoint : **/api/v1/trade/**
 
-###Methods
+### Methods
  
-####getOpenOrders
+#### getOpenOrders
 
 Return the list of orders owned by the connected user(owner of the API user) .
 
@@ -51,7 +51,7 @@ Return the list of orders owned by the connected user(owner of the API user) .
 
 **Example**
 
-#####Request
+##### Request
 
 ```text
 POST /api/v1/trade/?_key=YOUR_API_KEY HTTP/1.1
@@ -67,7 +67,7 @@ Content-Type: application/json
 }
 ```
 
-#####Response
+##### Response
 
 ```json
 {
@@ -104,7 +104,7 @@ Content-Type: application/json
 ```
 <hr>
 
-####getOrderHistory
+#### getOrderHistory
 
 Return the connected user order history. 
 
@@ -130,7 +130,8 @@ Return the connected user order history.
 </table>
 
 **Example**
-#####Request
+
+##### Request
 
 ```text
 POST /api/v1/trade/?_key=YOUR_API_KEY HTTP/1.1
@@ -146,7 +147,8 @@ Content-Type: application/json
 	"id":1
 }
 ```
-#####Response
+
+##### Response
 
 ```json
 
@@ -218,7 +220,7 @@ Order status
 
 <hr>
 
-####getTransactions
+#### getTransactions
 
 Return the list of transactions for a specific market.
 
@@ -253,7 +255,7 @@ Return the list of transactions for a specific market.
 
 **Example**
 
-#####Request
+##### Request
 
 ```text
 POST /api/v1/trade/?_key=YOUR_API_KEY HTTP/1.1
@@ -271,7 +273,7 @@ Content-Type: application/json
 }
 ```
 
-#####Response
+##### Response
 
 ```json
 {
@@ -299,7 +301,8 @@ Content-Type: application/json
 ```
 <hr>
 
-####sendOrder
+#### sendOrder
+
 Sends an order to the bitrevex matching engine.
 
 
@@ -347,7 +350,8 @@ Sends an order to the bitrevex matching engine.
 
 **Example**
 
-#####Request
+##### Request
+
 ```text
 POST /api/v1/trade/?_key=YOUR_API_KEY HTTP/1.1
 Host: www.bitrevex.com
@@ -367,7 +371,7 @@ Content-Type: application/json
 }
 ```
 
-#####Response
+##### Response
 
 ```json
 {
@@ -381,7 +385,7 @@ Content-Type: application/json
 ```
 <hr>
 
-####cancelOrder
+#### cancelOrder
 
 Cancel an existing **pending** order 
 
@@ -402,7 +406,7 @@ Cancel an existing **pending** order
 </table>
 
 
-#####Request
+##### Request
 ```text
 POST /api/v1/trade/?_key=YOUR_API_KEY HTTP/1.1
 Host: www.bitrevex.com
@@ -417,7 +421,7 @@ Content-Type: application/json
 }
 ```
 
-#####Response
+##### Response
 
 ```json
 {
@@ -432,7 +436,7 @@ Content-Type: application/json
 
 <hr>
 
-####getAllOpenOrders
+#### getAllOpenOrders
 
 Return all open order for a specific market
 
@@ -477,7 +481,9 @@ Order type :
 </table>
 
 **Example**
-#####Request
+
+##### Request
+
 ```text
 POST /api/v1/trade/?_key=YOUR_API_KEY HTTP/1.1
 Host: www.bitrevex.com
@@ -495,7 +501,8 @@ Content-Type: application/json
 }
 ```
 
-#####Response
+##### Response
+
 ```json
 {
     "jsonrpc": "2.0",
