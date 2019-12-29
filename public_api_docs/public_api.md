@@ -1,6 +1,6 @@
-#Bitrevex API Documentation
+# Bitrevex API Documentation
 
-##Public API documentation
+## Public API documentation
 
 ### Overview
 The following sections describe the bitrevex public API endpoints.
@@ -32,7 +32,7 @@ Return the OHLC(*Open, High, Low, Close) information for the last 24h about a sp
 
 
 **Example**
-#####Request 
+##### Request 
 ```
 POST /api/v1/public/ HTTP/1.1
 Host: www.bitrevex.com
@@ -48,7 +48,7 @@ Content-Type: application/json
 }
 ```
 
-#####Response
+##### Response
 ```
 {
     "jsonrpc": "2.0",
