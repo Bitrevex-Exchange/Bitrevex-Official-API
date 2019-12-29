@@ -58,21 +58,30 @@ Content-Type: application/json
 ```
 
 ##### Response
+
 ```json
 {
     "jsonrpc": "2.0",
     "id": 1,
     "result": {
-        "raw_balance": "25629928.34100000", <-- in the base unit (satoshi for BTC, Wei for ETH,...)
-        "balance": "0.25629928", <-- the balance
-        "raw_in_order": "12058905.75352400", <-- the raw balance in order
-        "in_order": "0.12058905",	<-- the balance in order 
+        "raw_balance": "25629928.34100000",
+        "balance": "0.25629928",
+        "raw_in_order": "12058905.75352400", 
+        "in_order": "0.12058905", 
         "symbol": "BTC"
     }
 }
 ```
+<ul>
+<li>raw_balance :  the balance in the base unit (satoshi for BTC, Wei for ETH,...)</li>
+<li>balance: the normal balance</li>
+<li>raw_in_order: the frozen balance in base unit</li>
+<li>in_order: the frozen balance</li>
+<li>symbol : the asset symbol</li>
+</ul>
 
 <hr>
+
 
 #### getAddress
 
@@ -92,6 +101,7 @@ Return addresses informations for a specific symbol.
 <td>The asset symbol (BTC,ETH,RVC,...)</td>
 </tr>
 </table>
+
 **Example**
 
 ##### Request
