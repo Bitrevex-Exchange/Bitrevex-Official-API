@@ -1,4 +1,4 @@
-#Bitrevex official API documentation
+# Bitrevex official API documentation
 
 ## Funds API 
 
@@ -41,7 +41,7 @@ Retrieve the balance of an user
 </table>
 
 **Example**
-#####Request
+##### Request
 ```text
 POST /api/v1/funds/?_key=YOUR_API_KEY HTTP/1.1
 Host: www.bitrevex.com
@@ -57,7 +57,7 @@ Content-Type: application/json
 }
 ```
 
-#####Response
+##### Response
 ```json
 {
     "jsonrpc": "2.0",
@@ -73,7 +73,7 @@ Content-Type: application/json
 ```
 
 <hr>
-####getAddress
+#### getAddress
 
 Return addresses informations for a specific symbol.
 
@@ -92,7 +92,7 @@ Return addresses informations for a specific symbol.
 </tr>
 </table>
 **Example**
-#####Request
+##### Request
 ```text
 POST /api/v1/funds/?_key=YOUR_API_KEY HTTP/1.1
 Host: localhost:8000
@@ -106,7 +106,7 @@ Content-Type: application/json
 	"id":1
 }
 ```
-#####Response
+##### Response
 ```json
 {
     "jsonrpc": "2.0",
@@ -139,7 +139,7 @@ Retrieve the user deposits
 </table>
 
 **Example**
-#####Request
+##### Request
 ```text
 POST /api/v1/funds/?_key=YOUR_API_KEY HTTP/1.1
 Host: www.bitrevex.com
@@ -154,7 +154,7 @@ Content-Type: application/json
 }
 ```
 
-#####Response
+##### Response
 ```json
 {
     "jsonrpc": "2.0",
@@ -211,7 +211,7 @@ Retreve the user withdrawals
 </tr>
 </table>
 
-#####Request
+##### Request
 ```text
 POST /api/v1/funds/?_key=YOUR_API_KEY HTTP/1.1
 Host: www.bitrevex.com
@@ -226,7 +226,7 @@ Content-Type: application/json
 }
 ```
 
-#####Response
+##### Response
 
 ```json
 {
@@ -248,7 +248,7 @@ Content-Type: application/json
 }
 ```
 
-Withdrawal states
+Withdrawal status
 
 <ul>
 <li>-1 : Waiting for user email confirmation</li>
