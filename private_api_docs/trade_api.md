@@ -573,3 +573,148 @@ Content-Type: application/json
 }
         
 ```
+
+<hr>
+
+
+#### getOHLC
+
+Retrieve OHLC(Open, High, Low, Close) data. It can bet useful for backtesting, or algorithmic technical analysis.
+
+
+<table>
+<tr>
+<th>Parameter name</th>
+<th>Required</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>want_symbol</td>
+<td>Yes</td>
+<td></td>
+<td>The left symbol</td>
+</tr>
+
+<tr>
+<td>offer_symbol</td>
+<td>Yes</td>
+<td></td>
+<td>The right symbol</td>
+</tr>
+
+
+<tr>
+<td>since</td>
+<td>Yes</td>
+<td></td>
+<td>The OHLC begin timestamp</td>
+</tr>
+
+<tr>
+<td>range</td>
+<td>Yes</td>
+<td></td>
+<td>The period of each OHLC data<br>
+Accepted values are:
+<ul>
+<li>minute</li>
+<li>hour</li>
+<li>day</li>
+<li>month</li>
+<li>year</li>
+</ul>
+</td>
+</tr>
+
+<tr>
+<td>range_count</td>
+<td>Yes</td>
+<td></td>
+<td>
+how many periods in each OHLC data ?<br>
+Example : if i want to show OHLC data of each 3 days<br>
+The range is : <b>day</b> and the range_count is <b>3</b>
+</td>
+</tr>
+
+
+<tr>
+<td>count</td>
+<td>No</td>
+<td></td>
+<td>
+how many OHLC data you want from the since timestamp.
+Leave it empty if you want the data from the since timestamp to the current timestamp.
+</td>
+
+</tr>
+
+
+</table>
+
+
+
+##### Request
+
+```text
+GET /api/v1/trade/?_key=610fbefbf2dd84e89d70c570311214294547d2b9992be085526a781c09a9487a HTTP/1.1
+Host: bitrevex.com
+Content-Type: application/json
+cache-control: no-cache
+{
+	"jsonrpc":"2.0",
+	"id":1,
+	"method":"getOHLC",
+	"params":{
+		"want_symbol":"ETH",
+		"offer_symbol":"BTC",
+		"since":"1551440946",
+		"range":"month",
+		"range_count":"3",
+		"count":"4"
+	}
+}"id":1
+}
+```
+
+##### Response
+
+```json
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": {
+        "1551440946": {
+            "highest": 0,
+            "lowest": 0,
+            "open": 0,
+            "closing": 0,
+            "volume": 0
+        },
+        "1559389746": {
+            "highest": 0,
+            "lowest": 0,
+            "open": 0,
+            "closing": 0,
+            "volume": 0
+        },
+        "1567338546": {
+            "highest": 0,
+            "lowest": 0,
+            "open": 0,
+            "closing": 0,
+            "volume": 0
+        },
+        "1575200946": {
+            "highest": 0,
+            "lowest": 0,
+            "open": 0,
+            "closing": 0,
+            "volume": 0
+        }
+    }
+}
+```
+
+<hr>
