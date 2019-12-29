@@ -4,5 +4,5 @@
 
 ### Overview
 
-The following section explain how to use the Bitrevex private API .
+The differents files explain how to use the Bitrevex private API .
  
