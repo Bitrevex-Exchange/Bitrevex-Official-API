@@ -1,4 +1,4 @@
-#Bitrevex official API Documentation
+# Bitrevex official API Documentation
 
 ## Private API
 
