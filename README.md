@@ -92,7 +92,7 @@ You need to put your Bitrevex API key into the URL request part to perform your 
 
 The example above show an example of usage of the private API.
 
-For more information go on [Private API Docs](./private_api_docs/private_api.md).
+For more information go on [Private API Docs](./private_api_docs/README.md).
 
 
 ### WebSocket API Overview
