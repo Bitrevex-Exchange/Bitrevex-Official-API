@@ -1,4 +1,4 @@
-#Bitrevex official API documentation
+# Bitrevex official API documentation
 
 ## User API
 
@@ -37,7 +37,8 @@ Retrieve the information about the requester user, the owner of the used API key
 
 **Example**
 
-#####Request 
+##### Request 
+
 ```text
 POST /api/v1/user/?_key=YOUR_API_KEY HTTP/1.1
 Host: www.bitrevex.com
@@ -55,7 +56,8 @@ Postman-Token: 58aec697-468f-4ace-af8b-1bba1f43578d
 }
 ```
 
-#####Response
+##### Response
+
 ```json
 {
     "jsonrpc": "2.0",
