@@ -49,7 +49,7 @@ function appendAskOrder( id , pair , amount , price , status , event)
 /**
 YOU MUST replace the localhost:8887 by bitrevex.com:8887
 */
-const url='ws://localhost:8887/orders'; 
+const url='ws://bitrevex.com:8887/orders'; 
 
 const connection = new WebSocket(url);
 

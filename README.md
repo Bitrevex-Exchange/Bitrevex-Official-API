@@ -1,4 +1,3 @@
-#Bitrevex API Documentation
 
 ### Overview
 
@@ -96,7 +95,7 @@ The example above show an example of usage of the private API.
 For more information go on [Private API Docs](./private_api_docs/private_api.md).
 
 
-###WebSocket API Overview
+### WebSocket API Overview
 
 The WebSocket provides you a simple real-time trading service. 
 
