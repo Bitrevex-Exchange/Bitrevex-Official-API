@@ -1,14 +1,14 @@
-#Bitrevex official API documentation
+# Bitrevex official API documentation
 
-##Trade WebSockets
+## Trade WebSockets
 
-###Introduction
+### Introduction
 
 WebSockets are a powerful real-time technology. It's used in bitrevex by the clients to know all of the operations that are performed on the exchange.
 
 It's recommended to try and test the samples for better understanding.
 
-###Websockets endpoints
+### Websockets endpoints
 
 The Bitrevex WebSockets services are available through the port 8887, on the address http://www.bitrevex.com. 
 
@@ -19,10 +19,10 @@ The availables endpoints are:
 <li><b>/transactions</b> : To receive transactions related messages</li>
 </ul>
 
-###Order related messages
+### Order related messages
 
 
-####OrderAdded
+#### OrderAdded
 
 This message is broadcasted (sended to all subscribers) when the engine detects that there is a new order added. the message is sent in the followning JSON form : 
 
@@ -69,7 +69,7 @@ The **event** field correspond to the kind of message. And the **order** contain
 </ul>
 
 
-####Order cancelled
+#### Order cancelled
 
 This message is sent when an user has cancelled his order. the message is in the following JSON form:
 
@@ -93,7 +93,7 @@ This message is sent when an user has cancelled his order. the message is in the
 ```
 
 
-####Order matched
+#### Order matched
 
 This message is sent when a new order is matched by the engine the message is in the following JSON form:
 
@@ -118,10 +118,11 @@ This message is sent when a new order is matched by the engine the message is in
 
 
 
-####Example code
+#### Example code
 
 
-#####For orders  
+##### For orders  
+
 ```javascript
 const url='ws://bitrevex.com:8887/orders'; 
 const connection = new WebSocket(url);
@@ -160,7 +161,9 @@ connection.onclose=function(e){
 	console.log("Connection closed");
 }
 ```
-#####For transactions 
+
+##### For transactions 
+
 ```javascript
 const url='ws://localhost:8887/transactions'; 
 
@@ -192,7 +195,7 @@ connection.onclose=function(e){
 ```
 
 
-###Transaction related messages
+### Transaction related messages
 
 For transaction there is only one message **NewTransaction**. and The data is an array containing transactions.
 
