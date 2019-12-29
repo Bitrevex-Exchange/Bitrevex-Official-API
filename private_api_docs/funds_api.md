@@ -73,6 +73,7 @@ Content-Type: application/json
 ```
 
 <hr>
+
 #### getAddress
 
 Return addresses informations for a specific symbol.
@@ -92,7 +93,9 @@ Return addresses informations for a specific symbol.
 </tr>
 </table>
 **Example**
+
 ##### Request
+
 ```text
 POST /api/v1/funds/?_key=YOUR_API_KEY HTTP/1.1
 Host: localhost:8000
@@ -106,7 +109,9 @@ Content-Type: application/json
 	"id":1
 }
 ```
+
 ##### Response
+
 ```json
 {
     "jsonrpc": "2.0",
@@ -119,6 +124,7 @@ Content-Type: application/json
 }
 ```
 <hr>
+
 #### getDeposits
 
 Retrieve the user deposits
@@ -139,7 +145,9 @@ Retrieve the user deposits
 </table>
 
 **Example**
+
 ##### Request
+
 ```text
 POST /api/v1/funds/?_key=YOUR_API_KEY HTTP/1.1
 Host: www.bitrevex.com
@@ -155,6 +163,7 @@ Content-Type: application/json
 ```
 
 ##### Response
+
 ```json
 {
     "jsonrpc": "2.0",
@@ -192,6 +201,7 @@ Deposits states:
 </ul>
 
 <hr>
+
 #### getWithdraws
 
 Retreve the user withdrawals
@@ -212,6 +222,7 @@ Retreve the user withdrawals
 </table>
 
 ##### Request
+
 ```text
 POST /api/v1/funds/?_key=YOUR_API_KEY HTTP/1.1
 Host: www.bitrevex.com
@@ -248,7 +259,7 @@ Content-Type: application/json
 }
 ```
 
-Withdrawal status
+<u>Withdrawal status</u>
 
 <ul>
 <li>-1 : Waiting for user email confirmation</li>
